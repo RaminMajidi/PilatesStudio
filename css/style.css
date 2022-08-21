@@ -29,6 +29,8 @@
 }
 body{
     overflow-x: hidden;
+    -webkit-overflow-x:hidden;
+    -moz-overflow-x:hidden;
 }
 /* ***************************************************** Common classes and styles */
 .background{
@@ -161,7 +163,7 @@ border-bottom: 1px solid var(--black-color);
 }
 .header-nav .logo{
     display: inline-block;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     letter-spacing: 1px;
 }
 .header-nav .nav-bar{
@@ -188,6 +190,7 @@ main{
     top:50px;
     margin:0 auto;
     padding-bottom: 200px;
+    overflow-x: hidden;
 }
 /* ***************************************************** Style For landing-page */
 .landing-page{
@@ -286,27 +289,13 @@ background-image: url(../images/bg2.png);
 .workouts-title .smal-title{
     color: var(--blue-color);
 }
-.arow{
+.arow i{
     margin-top: 50px;
-}
-.arow::before{
-position: absolute;
-content: "<";
-font-size: 2rem;
-transform:rotate(45deg);
-color: var(--blue-color);
-right: -11px;
-bottom:-15px;
-}
-.arow::after{
-    position: absolute;
-    content: "|";
-    font-size: 2.5rem;
-    transform:rotate(-45deg);
+    font-size: 5rem;
+    transform: rotate(45deg);
     color: var(--blue-color);
-    right: 9px;
-    bottom: -7px;
 }
+
 /* ***************************************************** Style For benefits Section  */
 .benefits{
     background-image: url(../images/bg2.png);
@@ -402,6 +391,12 @@ footer .big-title{
     .text-container .description{
         font-size: 1rem;
     }
+    .card-big-tilte{
+        font-size: 2.5rem;
+    }
+    .card-title{
+    top: 2.5rem;
+    }
 }
 @media(max-width:750px){
     :root{
@@ -462,10 +457,16 @@ footer .big-title{
 @media(max-width:480px){
     :root{
         --smal-title:1rem;
-        --big-title:1.7rem;
+        --big-title:1.3rem;
     }
+    .card-big-tilte{
+        font-size: 2rem;
+    }
+    .card-title{
+        top: 2rem;
+        }
     .nav-link{
-        font-size:.8rem;
+        font-size:.7rem;
         font-weight: bold;
     } 
     .header-nav .nav-bar{
